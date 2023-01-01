@@ -17,7 +17,7 @@ public class InputPageTest extends TestBase {
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(INPUT_PAGE_URL);
     }
 

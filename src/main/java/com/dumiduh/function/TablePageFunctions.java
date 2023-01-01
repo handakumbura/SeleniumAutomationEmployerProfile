@@ -1,17 +1,16 @@
 package com.dumiduh.function;
 
-import com.dumiduh.page.InputPage;
 import com.dumiduh.page.TablePage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 import java.util.List;
 import java.util.Map;
 
 public class TablePageFunctions {
     private TablePage tablePage;
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public TablePageFunctions(ChromeDriver driver) {
+    public TablePageFunctions(WebDriver driver) {
         this.driver = driver;
         tablePage = new TablePage(driver);
     }

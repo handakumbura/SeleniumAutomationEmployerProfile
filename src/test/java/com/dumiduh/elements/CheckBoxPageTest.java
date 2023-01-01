@@ -19,7 +19,7 @@ public class CheckBoxPageTest extends TestBase {
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(CHECKBOX_PAGE_URL);
     }
 

@@ -1,23 +1,43 @@
 package com.dumiduh.utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import static com.dumiduh.constants.Constants.BROWSER;
 import static com.dumiduh.constants.Constants.RUN_HEADLESS;
 
 public class TestBase {
-    protected static ChromeDriver driver;
+    protected static WebDriver driver;
 
-    public static void instantiateChromeDriver() {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized");
+    public static void instantiateDriver() {
+        if (BROWSER.equals("chrome")) {
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
 
-        //runs selenium in headless mode if the argument is massed at run time.
-        if (Boolean.getBoolean(RUN_HEADLESS)) {
-            options.addArguments("headless");
+            if (Boolean.getBoolean(RUN_HEADLESS)) {
+                options.addArguments("headless");
+            }
+            driver = new ChromeDriver(options);
+        } else if (BROWSER.equals("edge")) {
+            WebDriverManager.edgedriver().setup();
+            EdgeOptions options = new EdgeOptions();
+            options.addArguments("start-maximized");
+
+            if (Boolean.getBoolean(RUN_HEADLESS)) {
+                options.addArguments("headless");
+            }
+            driver = new EdgeDriver(options);
+        } else{
+            Logger.getAnonymousLogger().log(Level.INFO,"An unsupported browser argument was provided at run-time.");
         }
-        driver = new ChromeDriver(options);
+
+
     }
 }

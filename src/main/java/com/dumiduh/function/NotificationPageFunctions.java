@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.NotificationPage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class NotificationPageFunctions {
     private NotificationPage notificationPage;
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public NotificationPageFunctions(ChromeDriver driver) {
+    public NotificationPageFunctions(WebDriver driver) {
         this.driver = driver;
         notificationPage = new NotificationPage(driver);
     }

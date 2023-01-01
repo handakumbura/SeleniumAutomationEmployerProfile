@@ -25,7 +25,7 @@ private static final By DROPDOWN = By.xpath("//*[@id='dropdown']");
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
 
         //implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));

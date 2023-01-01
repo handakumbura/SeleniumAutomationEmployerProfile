@@ -18,7 +18,7 @@ public class NotificationMessagePageTest extends TestBase {
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(Constants.NOTIFICATION_PAGE_URL);
     }
 

@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.DynamicContentPage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class DynamicContentPageFunctions {
     private DynamicContentPage dynamicContentPage;
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public DynamicContentPageFunctions(ChromeDriver driver) {
+    public DynamicContentPageFunctions(WebDriver driver) {
         this.driver = driver;
         dynamicContentPage = new DynamicContentPage(driver);
     }

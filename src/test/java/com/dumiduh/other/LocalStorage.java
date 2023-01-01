@@ -23,7 +23,7 @@ public class LocalStorage extends TestBase {
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(LOCAL_STORAGE);
     }
 

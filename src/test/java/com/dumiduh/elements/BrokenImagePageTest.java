@@ -5,9 +5,6 @@ import com.dumiduh.function.BrokenImagePageFunctions;
 import com.dumiduh.models.TestData;
 import com.dumiduh.utils.JSONUtil;
 import com.dumiduh.utils.TestBase;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -23,7 +20,7 @@ public class BrokenImagePageTest extends TestBase {
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(BASE_PAGE);
     }
 

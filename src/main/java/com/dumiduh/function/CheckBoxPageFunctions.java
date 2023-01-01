@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.CheckBoxPage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class CheckBoxPageFunctions {
     private CheckBoxPage checkBoxPage;
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public CheckBoxPageFunctions(ChromeDriver driver) {
+    public CheckBoxPageFunctions(WebDriver driver) {
         this.driver = driver;
         checkBoxPage = new CheckBoxPage(driver);
     }

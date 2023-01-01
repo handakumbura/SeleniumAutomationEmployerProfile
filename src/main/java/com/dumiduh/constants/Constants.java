@@ -30,10 +30,11 @@ public class Constants {
     public static final String RADIO_BUTTON = "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio";
 
     public static final String TABLE = "https://www.freecodecamp.org/news/html-tables-table-tutorial-with-css-example-code/";
+
     /**
      * Other constants.
      */
-
     public static final int DEFAULT_WAIT_TIME = 60;
     public static String RUN_HEADLESS = System.getProperty("SELENIUM_HEADLESS", "false");
+    public static String BROWSER = System.getProperty("BROWSER","edge");
 }

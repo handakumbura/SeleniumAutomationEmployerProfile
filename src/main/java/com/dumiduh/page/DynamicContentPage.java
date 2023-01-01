@@ -1,18 +1,22 @@
 package com.dumiduh.page;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DynamicContentPage extends PageBase {
-    private ChromeDriver driver;
+    private WebDriver driver;
     private By divContent = By.xpath("//*[@id='content' and contains(@class, 'large-10')]");
     private By divContentRows = By.xpath("//*[@id='content' and contains(@class, 'large-10')]/*[@class='row']");
 
-    public DynamicContentPage(ChromeDriver driver) {
+    public DynamicContentPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    /***
+     * Lets you know if the dynamic content is available on the page.
+     * @return The status.
+     */
     public boolean isTheDynamicContentAvailable() {
         try {
             driver.findElements(divContentRows);
@@ -22,6 +26,10 @@ public class DynamicContentPage extends PageBase {
         }
     }
 
+    /***
+     * Lets you know the number of content rows displayed on the page.
+     * @return The number of rows.
+     */
     public int numberOfRowsContentDisplayed() {
         return driver.findElements(divContentRows).size();
     }

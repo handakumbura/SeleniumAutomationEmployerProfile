@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.SliderPage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class SliderPageFunctions {
-    private ChromeDriver driver;
+    private WebDriver driver;
     private SliderPage sliderPage;
 
-    public SliderPageFunctions(ChromeDriver driver) {
+    public SliderPageFunctions(WebDriver driver) {
         this.driver = driver;
         sliderPage = new SliderPage(driver);
     }

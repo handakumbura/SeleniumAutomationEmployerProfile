@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.InputPage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class InputPageFunctions {
     private InputPage inputPage;
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public InputPageFunctions(ChromeDriver driver) {
+    public InputPageFunctions(WebDriver driver) {
         this.driver = driver;
         inputPage = new InputPage(driver);
     }

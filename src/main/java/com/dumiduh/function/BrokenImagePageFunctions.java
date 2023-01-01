@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.BrokenImagePage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class BrokenImagePageFunctions {
-    private ChromeDriver driver;
+    private WebDriver driver;
     private BrokenImagePage brokenImagePage;
 
-    public BrokenImagePageFunctions(ChromeDriver driver) {
+    public BrokenImagePageFunctions(WebDriver driver) {
         this.driver = driver;
         brokenImagePage = new BrokenImagePage(driver);
     }

@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.DropDownPage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class DropDownPageFunctions {
     private DropDownPage dropDownPage;
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public DropDownPageFunctions(ChromeDriver driver) {
+    public DropDownPageFunctions(WebDriver driver) {
         this.driver = driver;
         dropDownPage = new DropDownPage(driver);
     }

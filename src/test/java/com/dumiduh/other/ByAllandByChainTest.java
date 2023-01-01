@@ -28,7 +28,7 @@ public class ByAllandByChainTest extends TestBase {
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(Constants.DYNAMIC_LOAD);
     }
 

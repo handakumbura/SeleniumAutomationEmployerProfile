@@ -12,7 +12,7 @@ public class TablePageTest extends TestBase {
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(TABLE);
     }
 

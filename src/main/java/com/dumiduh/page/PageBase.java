@@ -1,9 +1,10 @@
 package com.dumiduh.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 
+/***
+ * Place for page layer common utility methods.
+ */
 public class PageBase {
     protected WebDriver driver;
     public void waitForPredefinedDuration(int duration) {

@@ -3,7 +3,6 @@ package com.dumiduh.elements;
 
 import com.dumiduh.function.DynamicPageFunctions;
 import com.dumiduh.utils.TestBase;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -19,7 +18,7 @@ public class DynamicLoadPageTest extends TestBase {
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(DYNAMIC_LOAD_PAGE);
     }
 

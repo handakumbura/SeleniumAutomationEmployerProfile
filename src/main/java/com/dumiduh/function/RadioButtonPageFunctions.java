@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.RadioButtonPage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class RadioButtonPageFunctions {
     private RadioButtonPage radioButtonPage;
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public RadioButtonPageFunctions(ChromeDriver driver) {
+    public RadioButtonPageFunctions(WebDriver driver) {
         this.driver = driver;
         radioButtonPage = new RadioButtonPage(driver);
     }

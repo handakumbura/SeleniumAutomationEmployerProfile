@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.KeyPage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class KeyPageFunctions {
     private KeyPage keyPage;
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public KeyPageFunctions(ChromeDriver driver) {
+    public KeyPageFunctions(WebDriver driver) {
         this.driver = driver;
         keyPage = new KeyPage(driver);
     }

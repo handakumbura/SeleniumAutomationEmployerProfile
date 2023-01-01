@@ -19,7 +19,7 @@ public class DynamicContentPageTest extends TestBase {
 
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(DYNAMIC_CONTENT_URL);
     }
 

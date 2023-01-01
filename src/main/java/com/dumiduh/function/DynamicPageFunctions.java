@@ -1,13 +1,13 @@
 package com.dumiduh.function;
 
 import com.dumiduh.page.DynamicLoadPage;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class DynamicPageFunctions {
     private DynamicLoadPage dynamicLoadPage;
-    private ChromeDriver driver;
+    private WebDriver driver;
 
-    public DynamicPageFunctions(ChromeDriver driver) {
+    public DynamicPageFunctions(WebDriver driver) {
         this.driver = driver;
         dynamicLoadPage = new DynamicLoadPage(driver);
     }

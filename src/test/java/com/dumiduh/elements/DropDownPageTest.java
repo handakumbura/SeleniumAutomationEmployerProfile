@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class DropDownPageTest extends TestBase {
     @BeforeClass
     public static void setup() {
-        instantiateChromeDriver();
+        instantiateDriver();
         driver.get(Constants.DROPDOWN_PAGE_URL);
     }
 

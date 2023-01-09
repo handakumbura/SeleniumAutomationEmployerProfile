@@ -30,7 +30,8 @@ public class RadioButtonPage extends PageBase {
      */
     public String getValueOfTheSelectedOption() {
         //possible defect or limitation in the JavascriptExecutor.
-        String result = (String) ((JavascriptExecutor) driver).executeScript("$0.getAttribute('value')");
+        String result = (String) ((JavascriptExecutor) driver).executeScript("$0.innerText()");
+        //String result = (String) ((JavascriptExecutor) driver).executeScript("console.log('---tests---')");
         return result;
     }
 

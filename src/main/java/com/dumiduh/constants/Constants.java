@@ -31,10 +31,12 @@ public class Constants {
 
     public static final String TABLE = "https://www.freecodecamp.org/news/html-tables-table-tutorial-with-css-example-code/";
 
+    public static final String MULTI_WINDOW = "https://the-internet.herokuapp.com/windows";
+
     /**
      * Other constants.
      */
     public static final int DEFAULT_WAIT_TIME = 60;
     public static String RUN_HEADLESS = System.getProperty("SELENIUM_HEADLESS", "false");
-    public static String BROWSER = System.getProperty("BROWSER","edge");
+    public static String BROWSER = System.getProperty("BROWSER","chrome");
 }

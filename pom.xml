@@ -33,7 +33,7 @@
         <maven.compiler.source>1.9</maven.compiler.source>
         <maven.compiler.target>1.9</maven.compiler.target>
         <selenium.webdriver>4.1.2</selenium.webdriver>
-        <selenium.util>0.6.5</selenium.util>
+        <selenium.util>0.7.0</selenium.util>
         <lombok>1.18.22</lombok>
         <webdrivermanager>5.1.0</webdrivermanager>
     </properties>

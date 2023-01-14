@@ -37,6 +37,6 @@ public class Constants {
      * Other constants.
      */
     public static final int DEFAULT_WAIT_TIME = 60;
-    public static String RUN_HEADLESS = System.getProperty("SELENIUM_HEADLESS", "false");
+    public static String RUN_HEADLESS = System.getProperty("SELENIUM_HEADLESS", "true");
     public static String BROWSER = System.getProperty("BROWSER","chrome");
 }

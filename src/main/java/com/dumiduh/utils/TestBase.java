@@ -21,7 +21,7 @@ public class TestBase {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
 
-            if (Boolean.getBoolean(RUN_HEADLESS)) {
+            if (RUN_HEADLESS.equals("true")) {
                 options.addArguments("headless");
             }
             driver = new ChromeDriver(options);
@@ -30,7 +30,7 @@ public class TestBase {
             EdgeOptions options = new EdgeOptions();
             options.addArguments("start-maximized");
 
-            if (Boolean.getBoolean(RUN_HEADLESS)) {
+            if (RUN_HEADLESS.equals("true")) {
                 options.addArguments("headless");
             }
             driver = new EdgeDriver(options);

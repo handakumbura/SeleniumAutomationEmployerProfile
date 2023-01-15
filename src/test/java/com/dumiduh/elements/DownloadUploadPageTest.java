@@ -39,6 +39,7 @@ public class DownloadUploadPageTest extends TestBase {
     public static void setup() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
         Map<String, Object> prefs = new HashMap<String, Object>();
         prefs.put(DOWNLOAD_FOLDER_PATH_KEY, DOWNLOAD_FOLDER_PATH_VALUE);
         options.setExperimentalOption("prefs", prefs);

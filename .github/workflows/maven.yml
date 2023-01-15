@@ -4,7 +4,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "debug_gh_action_issue" ]
 
 jobs:
   build:

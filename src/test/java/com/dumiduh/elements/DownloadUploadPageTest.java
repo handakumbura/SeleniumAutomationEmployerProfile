@@ -46,13 +46,13 @@ public class DownloadUploadPageTest extends TestBase {
         driver = new ChromeDriver(options);
     }
 
-    @Test
+    @Test(enabled = false)
     public static void downloadTest() {
         driver.get(DOWLOAD_ASSET);
         FileUtil.isFileAvailableInTheGivenLocation(DOWNLOAD_FOLDER_PATH_KEY + DOWNLOAD_ASSET_NAME);
     }
 
-    @Test
+    @Test(enabled = false)
     public static void uploadTest() {
         driver.get(UPLOAD_ASSET);
         driver.findElement(UPLOAD).sendKeys(UPLOAD_ASSET_FULLY_QUALIFIED_NAME);

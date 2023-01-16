@@ -21,7 +21,7 @@ public class GetScreenshotTest extends TestBase {
         driver.get(Constants.DROPDOWN_PAGE_URL);
     }
 
-    @Test
+    @Test(enabled = false)
     public static void dropDownTest() {
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);

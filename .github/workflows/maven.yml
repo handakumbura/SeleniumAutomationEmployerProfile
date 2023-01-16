@@ -4,12 +4,12 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "debug_gh_action_issue" ]
+    branches: [ "main" ]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3

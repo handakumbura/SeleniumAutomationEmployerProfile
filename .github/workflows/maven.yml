@@ -1,4 +1,4 @@
-# Triggers the test suite upon push to main.
+# Triggers the test suite upon push to main on Windows.
 
 name: Java CI with Maven
 

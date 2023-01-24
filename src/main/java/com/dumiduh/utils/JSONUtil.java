@@ -21,7 +21,7 @@ public class JSONUtil {
      */
     public static TestData readTestData(String id) {
         try {
-            String json = new String(Files.readAllBytes(Paths.get("src"+File.separator+"main"+File.separator+"java"+File.separator+"com"+File.separator+"dumiduh"+File.separator+"resources"+File.separator+"test_data.json")));
+            String json = new String(Files.readAllBytes(Paths.get("src"+File.separator+"main"+File.separator+"java"+File.separator+"com"+File.separator+"dumiduh"+File.separator+"resources"+File.separator+"testdata.json")));
             ArrayList<Object> obj = new Gson().fromJson(json, new TypeToken<Collection<TestData>>() {
             }.getType());
             return parseTheTestDataObject(obj, id);

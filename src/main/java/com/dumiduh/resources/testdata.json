@@ -4,6 +4,7 @@
     "category": "Books",
     "language": "English",
     "productIndex": 1,
-    "quantity": 2
+    "quantity": 2,
+    "emptyCartSuccessMessage": "Your Amazon Cart is empty."
   }
 ]

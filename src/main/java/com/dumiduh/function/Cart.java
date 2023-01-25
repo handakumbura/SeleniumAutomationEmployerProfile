@@ -16,8 +16,8 @@ public class Cart {
         cartPage.clickClearCart();
     }
 
-    public boolean isClearCartSuccessMessageDisplayed() {
-        return cartPage.isCartClearSuccessMessageDisplayed();
+    public boolean isClearCartSuccessMessageDisplayed(String expectedMessage) {
+        return cartPage.isCartClearSuccessMessageDisplayed(expectedMessage);
     }
 
     public double getSubTotal() {

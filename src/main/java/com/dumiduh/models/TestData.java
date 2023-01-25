@@ -14,4 +14,5 @@ public class TestData {
     private String category;
     private int quantity;
     private int productIndex;
+    private String emptyCartSuccessMessage;
 }

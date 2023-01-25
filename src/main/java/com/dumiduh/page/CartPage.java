@@ -10,22 +10,23 @@ public class CartPage extends AbstractionBase {
     private By productQuantity = By.xpath("//span[@id='sc-subtotal-label-buybox']");
     private By subTotal = By.xpath("//span[@id='sc-subtotal-amount-buybox']");
     private By lnkDelete = By.xpath("//*[@value='Delete']");
-    private By spanCartClearSuccessMessage = By.xpath("//*[contains(text(),'Cart is empty.')]");
+    private String spanCartClearSuccessMessage = "//*[contains(text(),'%s')]";
 
     public CartPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public double getSubTotal() {
-        return Double.parseDouble(driver.findElement(subTotal).getText().split("\\$")[1]);
+        return Double.parseDouble(waitForVisibilityOfElement(driver,driver.findElement(subTotal)).getText().split("\\$")[1]);
     }
 
     public void clickClearCart() {
         driver.findElement(lnkDelete).click();
     }
 
-    public boolean isCartClearSuccessMessageDisplayed() {
-        return driver.findElement(spanCartClearSuccessMessage).isDisplayed();
+    public boolean isCartClearSuccessMessageDisplayed(String expectedMessage) {
+        sleep(); //todo
+        return driver.findElement(By.xpath(String.format(spanCartClearSuccessMessage,expectedMessage))).isDisplayed();
     }
 
     public String getTheProductName() {

@@ -11,6 +11,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.logging.Level;
+
 import static com.dumiduh.constants.Constants.*;
 
 
@@ -19,34 +21,34 @@ public class ProductSearchAndDetailsTest extends TestBase {
     @BeforeClass
     public static void setup() {
         instantiateDriver();
-        inputData = JSONUtil.readTestData(); //reading input data from the test data file.
-        driver.get(URL_TEMP);
+        data = JSONUtil.readTestData(); //reading input data from the test data file.
+        driver.get(JSONUtil.readConfigurations().getBaseURL()); //reading the base url from the properties file.
     }
 
     @Test
     public static void validateTheProductSearchAndPricingData() {
-
         HeaderMenu headerMenu = new HeaderMenu(driver);
 
-        headerMenu.selectAValueFromTheSelectSearchCategoryDropdown(inputData.getCategory());
-        headerMenu.typeInTheProductSearchTermAndPressEnter(inputData.getSearchTerm());
+        headerMenu.selectAValueFromTheSelectSearchCategoryDropdown(data.getCategory());
+        headerMenu.typeInTheProductSearchTermAndPressEnter(data.getSearchTerm());
 
         SearchResults searchResults = new SearchResults(driver);
 
         searchResults.filterByFourStarReviews();
-        searchResults.filterByLanguage(inputData.getLanguage()); //sync
-        String productNameFoundInSearchResults = searchResults.getProductName(inputData.getProductIndex()); //sync
-        searchResults.selectProductByIndex(inputData.getProductIndex()); //sync
+        searchResults.filterByLanguage(data.getLanguage());
+        String productNameFoundInSearchResults = searchResults.getProductName(data.getProductIndex()); //sync
+        searchResults.selectProductByIndex(data.getProductIndex());
 
-        ProductDetails productDetails = new ProductDetails(driver); //sync
+        ProductDetails productDetails = new ProductDetails(driver);
 
-        double unitPrice = productDetails.getUnitPrice();
         String productNameFoundOnTheProductDetailsPage = productDetails.getProductName();
-        productDetails.setQuantity(inputData.getQuantity());
+        logger.log(Level.INFO, "The product selected :\t" + productNameFoundOnTheProductDetailsPage);
+        double unitPrice = productDetails.getUnitPrice();
+        productDetails.setQuantity(data.getQuantity());
 
         Assert.assertEquals(productNameFoundOnTheProductDetailsPage, productNameFoundInSearchResults, "The name of the product found in the search results didn't match the name found in the product details page.");
 
-        productDetails.clickAddToCart(); //sync
+        productDetails.clickAddToCart();
         headerMenu.clickGoToCart();
 
         Cart cart = new Cart(driver);
@@ -57,8 +59,8 @@ public class ProductSearchAndDetailsTest extends TestBase {
         //Asserting the information in the cart.
         assertCartDetails(productNameFromTheCart, productNameFoundOnTheProductDetailsPage, actualQuantity, subTotal,unitPrice);
 
-        cart.clickClearCart();//sync
-        Assert.assertTrue(cart.isClearCartSuccessMessageDisplayed(),"The success message was not displayed after clearing the cart.");
+        cart.clickClearCart();
+        Assert.assertTrue(cart.isClearCartSuccessMessageDisplayed(data.getEmptyCartSuccessMessage()),"The success message was not displayed after clearing the cart.");
 
     }
 
@@ -71,10 +73,10 @@ public class ProductSearchAndDetailsTest extends TestBase {
         Assert.assertEquals(expectedProductName,actualProductName, "The product name in the product details page and the product name in the cart didn't match.");
 
         //Asserting the quantity.
-        Assert.assertEquals(inputData.getQuantity(),actualQuantity,"The expected quantity and the actual quantity didn't match.");
+        Assert.assertEquals(data.getQuantity(),actualQuantity,"The expected quantity and the actual quantity didn't match.");
 
         //Asserting the price related information.
-        Assert.assertEquals(subTotal, unitPrice * inputData.getQuantity(), "The pricing information on the product details didn't match with the information in the cart.");
+        Assert.assertEquals(subTotal, unitPrice * data.getQuantity(), "The pricing information on the product details didn't match with the information in the cart.");
     }
 
     @AfterClass

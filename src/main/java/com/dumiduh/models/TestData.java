@@ -8,8 +8,10 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TestData {
-
-    private String Id;
-    private String stringValue;
-    private int intValue;
+    private String id;
+    private String searchTerm;
+    private String language;
+    private String category;
+    private int quantity;
+    private int productIndex;
 }

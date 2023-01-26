@@ -4,11 +4,9 @@ import com.dumiduh.page.CartPage;
 import org.openqa.selenium.WebDriver;
 
 public class Cart {
-    private WebDriver driver;
     private CartPage cartPage;
 
     public Cart(WebDriver driver) {
-        this.driver = driver;
         cartPage = new CartPage(driver);
     }
 

@@ -12,27 +12,51 @@ public class CartPage extends AbstractionBase {
     private By lnkDelete = By.xpath("//*[@value='Delete']");
     private String spanCartClearSuccessMessage = "//*[contains(text(),'%s')]";
 
+    /***
+     * The page abstraction for the cart screen.
+     * @param driver
+     */
     public CartPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    /***
+     * Returns the sub total.
+     * @return
+     */
     public double getSubTotal() {
-        return Double.parseDouble(waitForVisibilityOfElement(driver,driver.findElement(subTotal)).getText().split("\\$")[1]);
+        return Double.parseDouble(waitForVisibilityOfElement(driver, driver.findElement(subTotal)).getText().split("\\$")[1]);
     }
 
+    /***
+     * Clears the cart.
+     */
     public void clickClearCart() {
         driver.findElement(lnkDelete).click();
     }
 
+    /***
+     * Checks to see if the clear cart success message is displayed.
+     * @param expectedMessage
+     * @return state of the message element visibility.
+     */
     public boolean isCartClearSuccessMessageDisplayed(String expectedMessage) {
-        sleep(); //todo
-        return driver.findElement(By.xpath(String.format(spanCartClearSuccessMessage,expectedMessage))).isDisplayed();
+        sleep();
+        return driver.findElement(By.xpath(String.format(spanCartClearSuccessMessage, expectedMessage))).isDisplayed();
     }
 
+    /***
+     * Returns the product name.
+     * @return the product name.
+     */
     public String getTheProductName() {
         return driver.findElement(productName).getText();
     }
 
+    /***
+     * Returns the product quantity.
+     * @return the product quantity.
+     */
     public int getProductQuantity() {
         return Integer.parseInt(driver.findElement(productQuantity).getText().split("\\(")[1].substring(0, 1));
     }

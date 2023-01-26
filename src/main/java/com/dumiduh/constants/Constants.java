@@ -1,12 +1,12 @@
 package com.dumiduh.constants;
 
+import java.util.logging.Level;
+
 public class Constants {
 
-    /***
-     * URLs
-     */
-    public static final String URL_TEMP = "https://www.amazon.com/";
-
+    private Constants(){
+        //added for lint compliance.
+    }
 
     /**
      * Other constants.
@@ -24,6 +24,10 @@ public class Constants {
 
     public static String TRUE = "true";
     public static String FALSE = "false";
+
+
+    // Log level.
+    public static final Level LOG_LEVEL = Level.INFO;
 
 
 }

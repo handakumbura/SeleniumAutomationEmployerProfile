@@ -2,7 +2,7 @@
 <suite name="Swivel Group Assignment" verbose="1" >
   <test name="Amazon product search and cart test">
     <classes>
-        <!--class name="com.dumiduh."/-->
+        <class name="com.dumiduh.ProductSearchAndDetailsTest"/>
     </classes>
   </test>
 </suite>

@@ -20,13 +20,15 @@ import static com.dumiduh.constants.Constants.*;
 public class TestBase {
     protected static WebDriver driver;
     protected static TestData data;
-    protected static Logger logger;
+    protected static Logger logger = logger = Logger.getLogger(TestBase.class.getName());
 
     public TestBase() {
-        logger = Logger.getLogger(TestBase.class.getName());
         configureLogger();
     }
 
+    /***
+     * Instantiates the WebDriver based on the configuration.
+     */
     protected static void instantiateDriver() {
 
         try {
@@ -60,13 +62,13 @@ public class TestBase {
                 Logger.getAnonymousLogger().log(Level.INFO, "An unsupported browser argument was provided at run-time.");
             }
         } catch (SessionNotCreatedException e) {
-            //todo
+            logger.log(Level.SEVERE,e.getMessage());
         }
 
     }
 
     private void configureLogger() {
-        logger.setLevel(Level.INFO);
+        logger.setLevel(LOG_LEVEL);
 
         try {
             Handler fileHandler = new FileHandler("src" + File.separator + "main" + File.separator + "java" + File.separator + "com" + File.separator + "dumiduh" + File.separator + "resources" + File.separator + "logs" + File.separator + "runtime.log", 10000, 1);

@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ProductDetailsPage extends AbstractionBase {
     private WebDriver driver;
-    private Select select;
     private final By spanUnitPriceVersionOne = By.xpath("//*[@id='rental-header-price']//descendant::span");
     private final By spanUnitPriceVersionTwo = By.xpath("//*[@id='corePrice_feature_div']//descendant::span");
     private final By spanUnitPriceVersionThree = By.xpath("//*[@id='kindle-price']");
@@ -20,24 +19,43 @@ public class ProductDetailsPage extends AbstractionBase {
     private By selectQuantity = By.xpath("//select[@id='quantity']");
     private By btnAddToCart = By.xpath("//input[@id='add-to-cart-button']");
 
+    /***
+     * The page abstraction for the product details screen.
+     * @param driver
+     */
     public ProductDetailsPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    /***
+     * Returns the unit price.
+     * @return The unit price.
+     */
     public double getUnitPrice() {
         WebElement unitPrice = driver.findElement(new ByAll(spanUnitPriceVersionOne, spanUnitPriceVersionTwo, spanUnitPriceVersionThree, spanUnitPriceVersionFour));
         return Double.parseDouble(waitForVisibilityOfElement(driver, unitPrice).getText().split("\\$")[1]);
     }
 
+    /***
+     * Returns the product name.
+     * @return The product name.
+     */
     public String getProductName() {
         return waitForVisibilityOfElement(driver, driver.findElement(spanProductName)).getText();
     }
 
+    /***
+     * Returns the quantity.
+     * @param quantity The quantity.
+     */
     public void setQuantity(int quantity) {
-        select = new Select(driver.findElement(selectQuantity));
+        Select select = new Select(driver.findElement(selectQuantity));
         select.selectByVisibleText(Integer.toString(quantity));
     }
 
+    /***
+     * Adds item to cart.
+     */
     public void clickAddToCart() {
         driver.findElement(btnAddToCart).click();
     }

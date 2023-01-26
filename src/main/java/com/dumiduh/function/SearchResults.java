@@ -4,11 +4,9 @@ import com.dumiduh.page.SearchResultsPage;
 import org.openqa.selenium.WebDriver;
 
 public class SearchResults {
-    private WebDriver driver;
     private SearchResultsPage searchResultsPage;
 
     public SearchResults(WebDriver driver) {
-        this.driver = driver;
         searchResultsPage = new SearchResultsPage(driver);
     }
 

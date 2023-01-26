@@ -1,4 +1,4 @@
-# Selenium Automation Swivel Group Assessment. 
+# Swivel Group Assessment: Selenium Automation. 
 
 To run this project, you must first have Java 1.9 and Apache Maven configured on a Windows Computer. Once the prerequisite are met,
 

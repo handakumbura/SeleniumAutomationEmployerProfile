@@ -20,7 +20,7 @@
         <classes>
             <class name="com.dumiduh.other.ByAllandByChainTest"/>
             <class name="com.dumiduh.other.CustomeLocatorTest"/>
-            <class name="com.dumiduh.other.DataProviderTest"/>
+            <class name="com.dumiduh.other.CrossMobileAgentTest"/>
             <class name="com.dumiduh.other.ExpectedConditionsTest"/>
             <class name="com.dumiduh.other.GridTest"/>
             <class name="com.dumiduh.other.LocalStorage"/>

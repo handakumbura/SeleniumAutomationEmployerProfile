@@ -4,7 +4,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "feature/swivel_group_assessment " ]
 
 jobs:
   build:

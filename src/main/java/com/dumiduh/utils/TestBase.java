@@ -21,23 +21,15 @@ public class TestBase {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
 
-            if (RUN_HEADLESS.equals("true")) {
-                options.addArguments("headless");
-            }
             driver = new ChromeDriver(options);
         } else if (BROWSER.equals("edge")) {
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
-            options.addArguments("start-maximized");
 
-            if (RUN_HEADLESS.equals("true")) {
-                options.addArguments("headless");
-            }
             driver = new EdgeDriver(options);
         } else{
             Logger.getAnonymousLogger().log(Level.INFO,"An unsupported browser argument was provided at run-time.");
         }
-
 
     }
 }

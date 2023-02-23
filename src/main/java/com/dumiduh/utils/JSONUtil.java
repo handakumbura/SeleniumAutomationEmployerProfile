@@ -19,12 +19,12 @@ public class JSONUtil {
      * @param id The id of the test data object that needs to be returned.
      * @return The test data object that matches the search criteria.
      */
-    public static TestData readTestData(String id) {
+    public static ArrayList<Object> readTestData(String id) {
         try {
             String json = new String(Files.readAllBytes(Paths.get("src"+File.separator+"main"+File.separator+"java"+File.separator+"com"+File.separator+"dumiduh"+File.separator+"resources"+File.separator+"test_data.json")));
             ArrayList<Object> obj = new Gson().fromJson(json, new TypeToken<Collection<TestData>>() {
             }.getType());
-            return parseTheTestDataObject(obj, id);
+            return obj;
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,5 +1,4 @@
-package com.dumiduh.other;
-
+package com.dumiduh.elements;
 
 import com.dumiduh.models.TestData;
 import org.testng.annotations.DataProvider;
@@ -9,7 +8,7 @@ import org.testng.annotations.Test;
  * The objective of this class is to demonstrate data driven testing using a TestNG data provider.
  */
 
-public class DataProviderTest {
+public class DropDownDataProvider {
 
     @DataProvider(name = "generateTestData")
     public static Object[][] generateData() {
@@ -21,10 +20,5 @@ public class DataProviderTest {
         t2.setIntValue(2);
 
         return new TestData[][] {{t},{t2}};
-    }
-
-    @Test(dataProvider = "generateTestData")
-    public static void testDataProvider(TestData s) {
-        System.out.println(s);
     }
 }

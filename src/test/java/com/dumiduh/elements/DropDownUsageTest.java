@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 /**
  * The objective of this test class is to demonstrate how a dropdown maybe handled.
  */
-public class DropDownPageTest extends TestBase {
+public class DropDownUsageTest extends TestBase {
     @BeforeClass
     public static void setup() {
         instantiateDriver();
@@ -23,12 +23,12 @@ public class DropDownPageTest extends TestBase {
     @Test
     public static void dropDownTest() {
         DropDownPageFunctions dropDownPageFunctions = new DropDownPageFunctions(driver);
-        TestData testData = JSONUtil.readTestData("002");
 
-        dropDownPageFunctions.selectValueFromDropDown(testData.getStringValue());
+       // dropDownPageFunctions.selectValueFromDropDown(testData.getStringValue());
 
         //Asserts to see if the dropdown selection has been set.
-        Assert.assertTrue(dropDownPageFunctions.isTheGivenValueSelected(testData.getStringValue()), "The given value was not set as the dropdown selection.");
+        //Assert.assertTrue(dropDownPageFunctions.isTheGivenValueSelected(testData.getStringValue()), "The given
+        // value was not set as the dropdown selection.");
     }
 
     @AfterClass

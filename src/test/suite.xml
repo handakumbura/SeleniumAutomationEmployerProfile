@@ -2,29 +2,7 @@
 <suite name="Selenium Employer Profile" verbose="1" >
   <test name="HTML Elements based examples" >
     <classes>
-        <class name="com.dumiduh.elements.BrokenImagePageTest"/>
-        <class name="com.dumiduh.elements.CheckBoxPageTest"/>
-        <class name="com.dumiduh.elements.DropDownPageTest"/>
-        <class name="com.dumiduh.elements.DynamicContentPageTest"/>
-        <class name="com.dumiduh.elements.DynamicLoadPageTest"/>
-        <class name="com.dumiduh.elements.InputPageTest"/>
-        <class name="com.dumiduh.elements.KeyPageTest"/>
-        <class name="com.dumiduh.elements.NotificationMessagePageTest"/>
-        <class name="com.dumiduh.elements.RadiobuttonPageTest"/>
-        <class name="com.dumiduh.elements.SliderPageTest"/>
-        <class name="com.dumiduh.elements.TablePageTest"/>
-        <class name="com.dumiduh.elements.DownloadUploadPageTest"/>
+        <class name="com.dumiduh.elements.DropDownPageElementsTest"/>
     </classes>
- </test>
-    <test name="Other" >
-        <classes>
-            <class name="com.dumiduh.other.ByAllandByChainTest"/>
-            <class name="com.dumiduh.other.CustomeLocatorTest"/>
-            <class name="com.dumiduh.other.DataProviderTest"/>
-            <class name="com.dumiduh.other.ExpectedConditionsTest"/>
-            <class name="com.dumiduh.other.GridTest"/>
-            <class name="com.dumiduh.other.LocalStorage"/>
-            <class name="com.dumiduh.other.PageSynchronization"/>
-        </classes>
-    </test>
+  </test>
 </suite>

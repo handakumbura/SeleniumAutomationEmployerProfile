@@ -24,6 +24,7 @@ public class TestBase {
             if (RUN_HEADLESS.equals("true")) {
                 options.addArguments("headless");
             }
+            options.addArguments("start-maximized");
             driver = new ChromeDriver(options);
         } else if (BROWSER.equals("edge")) {
             WebDriverManager.edgedriver().setup();

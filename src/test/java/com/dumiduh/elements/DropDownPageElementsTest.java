@@ -21,9 +21,9 @@ public class DropDownPageElementsTest extends TestBase {
         driver.get(Constants.DROPDOWN_PAGE_URL);
     }
 
-    @Test(dataProviderClass = DropDownDataProvider.class, dataProvider = "generateTestData", testName = "dropDownPageElementTest")
+    @Test(dataProviderClass = DropDownDataProvider.class, dataProvider = "generateTestData")
     public static void dropDownPageElementTest(TestData data) {
-        data.getStringValue();
+        System.out.println(data);
     }
 
     @AfterClass

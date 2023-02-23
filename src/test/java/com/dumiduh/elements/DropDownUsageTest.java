@@ -21,7 +21,7 @@ public class DropDownUsageTest extends TestBase {
     }
 
     @Test
-    public static void dropDownTest() {
+    public static void dropDownUsageTest() {
         DropDownPageFunctions dropDownPageFunctions = new DropDownPageFunctions(driver);
 
        // dropDownPageFunctions.selectValueFromDropDown(testData.getStringValue());

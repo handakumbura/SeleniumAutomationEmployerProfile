@@ -1,28 +1,10 @@
 [
   {
-    "Id": "001",
+    "Id": "dropDownPageElementTest",
     "stringValue": "1"
   },
   {
-    "Id": "002",
+    "Id": "dropDownUsageTest",
     "stringValue": "Option 2"
-  },
-  {
-    "Id": "003",
-    "intValue": 3
-  },
-  {
-    "Id": "004",
-    "intValue": 2
-  },
-  {
-    "Id": "005",
-    "stringValue": "Action",
-    "intValue": 5
-  },
-  {
-    "Id": "006",
-    "stringValue": "asdf.jpg",
-    "intValue": 5
   }
 ]

@@ -2,7 +2,7 @@
 <suite name="Selenium Employer Profile" verbose="1" >
   <test name="HTML Elements based examples" >
     <classes>
-        <class name="com.dumiduh.elements.DropDownPageElementsTest"/>
+        <class name="com.dumiduh.elements.DropDownTest"/>
     </classes>
   </test>
 </suite>

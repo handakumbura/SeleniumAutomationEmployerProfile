@@ -1,10 +1,11 @@
 [
   {
     "Id": "dropDownPageElementTest",
-    "stringValue": "1"
+    "numberOfOptions": 3,
+    "listOfOptions": ["Please select an option","Option 1","Option 2"]
   },
   {
     "Id": "dropDownUsageTest",
-    "stringValue": "Option 2"
+    "dropDownSelection": "Option 1"
   }
 ]

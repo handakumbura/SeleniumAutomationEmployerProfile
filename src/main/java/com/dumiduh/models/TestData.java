@@ -2,6 +2,8 @@ package com.dumiduh.models;
 
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Builder
@@ -10,6 +12,7 @@ import lombok.*;
 public class TestData {
 
     private String Id;
-    private String stringValue;
-    private int intValue;
+    private int numberOfOptions;
+    private List<String> listOfOptions;
+    private String dropDownSelection;
 }

@@ -23,12 +23,11 @@ public class DropDownUsageTest extends TestBase {
     @Test
     public static void dropDownUsageTest() {
         DropDownPageFunctions dropDownPageFunctions = new DropDownPageFunctions(driver);
+        TestData testData = JSONUtil.readAGivenTestDataItem("dropDownUsageTest");
 
-       // dropDownPageFunctions.selectValueFromDropDown(testData.getStringValue());
-
+        dropDownPageFunctions.selectValueFromDropDown(testData.getDropDownSelection());
         //Asserts to see if the dropdown selection has been set.
-        //Assert.assertTrue(dropDownPageFunctions.isTheGivenValueSelected(testData.getStringValue()), "The given
-        // value was not set as the dropdown selection.");
+        Assert.assertTrue(dropDownPageFunctions.isTheGivenValueSelected(testData.getDropDownSelection()));
     }
 
     @AfterClass

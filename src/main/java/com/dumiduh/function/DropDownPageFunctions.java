@@ -3,6 +3,8 @@ package com.dumiduh.function;
 import com.dumiduh.page.DropDownPage;
 import org.openqa.selenium.WebDriver;
 
+import java.util.List;
+
 public class DropDownPageFunctions {
     private DropDownPage dropDownPage;
     private WebDriver driver;
@@ -18,6 +20,18 @@ public class DropDownPageFunctions {
      */
     public void selectValueFromDropDown(String value) {
         dropDownPage.selectValueFromDropDown(value);
+    }
+
+    public boolean isTheDropDownHeadingDisplayed() {
+        return dropDownPage.isElementHeadingDisplayed();
+    }
+
+    public boolean isTheDropDownDisplayed() {
+        return dropDownPage.isTheDropDownDisplayed();
+    }
+
+    public List<String> getTheListOfOptions() {
+        return dropDownPage.getAllDropDownOptions();
     }
 
     /***

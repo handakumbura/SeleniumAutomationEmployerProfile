@@ -14,7 +14,7 @@ public class DropDownDataProvider {
 
     @DataProvider(name = "generateTestData")
     public static Object[][] generateData() {
-        ArrayList<Object> data = JSONUtil.readTestData();
+        ArrayList<Object> data = JSONUtil.readAllTestData();
 
         TestData[][] dataItems = new TestData[data.size()][1];
         for (int x = 0; x < data.size(); x++) {

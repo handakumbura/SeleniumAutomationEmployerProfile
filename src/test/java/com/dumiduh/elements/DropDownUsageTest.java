@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
  * The objective of this test class is to demonstrate how a dropdown maybe handled.
  */
 public class DropDownUsageTest extends TestBase {
+
     @BeforeClass
     public static void setup() {
         instantiateDriver();
@@ -22,6 +23,7 @@ public class DropDownUsageTest extends TestBase {
 
     @Test
     public static void dropDownUsageTest() {
+        System.out.println("----" + DropDownTest.action);
         DropDownPageFunctions dropDownPageFunctions = new DropDownPageFunctions(driver);
         TestData testData = JSONUtil.readAGivenTestDataItem("dropDownUsageTest");
 

@@ -1,11 +1,8 @@
 [
   {
-    "Id": "dropDownPageElementTest",
+    "Id": "dropdownendtoend",
     "numberOfOptions": 3,
-    "listOfOptions": ["Please select an option","Option 1","Option 2"]
-  },
-  {
-    "Id": "dropDownUsageTest",
+    "listOfOptions": ["Please select an option","Option 1","Option 2"],
     "dropDownSelection": "Option 1"
   }
 ]

@@ -1,9 +1,12 @@
 package com.dumiduh.elements;
 
+import com.dumiduh.models.TestData;
+import com.dumiduh.utils.JSONUtil;
 import org.testng.annotations.Factory;
 
 public class DropDownTest {
-    static String action = "action 1";
+    static TestData data = JSONUtil.readAGivenTestDataItem("dropdownendtoend");
+
     @Factory
     public static Object[] DropDownTest() {
 

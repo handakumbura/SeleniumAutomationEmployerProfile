@@ -23,9 +23,9 @@ public class DropDownUsageTest extends TestBase {
 
     @Test
     public static void dropDownUsageTest() {
-        System.out.println("----" + DropDownTest.action);
+        TestData testData = DropDownTest.data;
+        System.out.println("::\t"+ testData.getDropDownSelection());
         DropDownPageFunctions dropDownPageFunctions = new DropDownPageFunctions(driver);
-        TestData testData = JSONUtil.readAGivenTestDataItem("dropDownUsageTest");
 
         dropDownPageFunctions.selectValueFromDropDown(testData.getDropDownSelection());
         //Asserts to see if the dropdown selection has been set.

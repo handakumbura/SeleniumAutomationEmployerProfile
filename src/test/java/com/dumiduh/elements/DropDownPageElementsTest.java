@@ -23,9 +23,8 @@ public class DropDownPageElementsTest extends TestBase {
 
     @Test
     public static void dropDownPageElementTest() {
-        System.out.println("::" + DropDownTest.action);
+        TestData data = DropDownTest.data;
 
-        TestData data = JSONUtil.readAGivenTestDataItem("dropDownPageElementTest");
         driver.get(DROPDOWN_PAGE_URL);
         DropDownPageFunctions dropdown = new DropDownPageFunctions(driver);
         Assert.assertTrue(dropdown.isTheDropDownHeadingDisplayed());
@@ -41,7 +40,7 @@ public class DropDownPageElementsTest extends TestBase {
 
     @AfterClass
     public void cleanUp() {
-        DropDownTest.action = "action 2";
+        DropDownTest.data.setDropDownSelection("Option 2");
         driver.quit();
     }
 }
